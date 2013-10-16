@@ -3,6 +3,11 @@ class ReportsController < ApplicationController
   # GET /reports.json
   def index
     @reports = Report.all
+    @frecuencias = Hash.new(0)
+    @reports.each {|u| @frecuencias[u.summoner] += 1 }
+    @frecuencias = @frecuencias.sort_by {|a,b| b}
+    @frecuencias.reverse!
+    @frecuencias.each { |summoner, frecuencia|   }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,9 +38,9 @@ class ReportsController < ApplicationController
   end
 
   # GET /reports/1/edit
-  def edit
-    @report = Report.find(params[:id])
-  end
+  # def edit
+  #   @report = Report.find(params[:id])
+  # end
 
   # POST /reports
   # POST /reports.json
@@ -55,22 +60,24 @@ class ReportsController < ApplicationController
 
   # PUT /reports/1
   # PUT /reports/1.json
-  def update
-    @report = Report.find(params[:id])
+  # def update
+  #   @report = Report.find(params[:id])
 
-    respond_to do |format|
-      if @report.update_attributes(params[:report])
-        format.html { redirect_to @report, notice: 'Report was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @report.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @report.update_attributes(params[:report])
+  #       format.html { redirect_to @report, notice: 'Report was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: "edit" }
+  #       format.json { render json: @report.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /reports/1
   # DELETE /reports/1.json
+
+=begin
   def destroy
     @report = Report.find(params[:id])
     @report.destroy
@@ -79,5 +86,8 @@ class ReportsController < ApplicationController
       format.html { redirect_to reports_url }
       format.json { head :no_content }
     end
+
+
   end
+=end
 end
