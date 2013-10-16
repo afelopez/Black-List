@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20131016033132) do
 
   create_table "reports", :force => true do |t|
     t.string   "summoner"
-    t.string   "type"
+    t.string   "types"
     t.string   "reason"
     t.text     "detail"
     t.datetime "created_at", :null => false

@@ -2,7 +2,7 @@ class CreateReports < ActiveRecord::Migration
   def change
     create_table :reports do |t|
       t.string :summoner
-      t.string :type
+      t.string :types
       t.string :reason
       t.text :detail
 
