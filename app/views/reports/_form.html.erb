@@ -1,0 +1,87 @@
+<div class="container-fluid">
+<%= form_for(@report) do |f| %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h4>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+
+  <h6 style="text-align: left">the elements that have (*) are required</h6>
+  <hr>
+
+  <div class="span3">
+  <h4>*Summoner’s Name:</h4>
+  <%= f.text_field :summoner%>
+
+
+  <h4>*Reason</h4>
+  <%= f.select :reason, [ ['',''],
+                ['Harassment: Offensive Language', 'Harassment: Offensive Language'],
+                ['Harassment: Verbal Abuse', 'Harassment: Verbal Abuse'],
+                ['Griefing: Intentionval Feeding', 'Griefing: Intentionval Feeding'],
+                ['Griefing: Assisting Enemy Team', 'Griefing: Assisting Enemy Team'] ]%>
+
+  <h4>Detail:</h4>
+  <%= f.text_area :detail, {:style => 'resize:vertical; width: 85%; height: 120px;'} %>
+
+  </div>
+
+  
+  <h4>*Type of Game:</h4>
+  <div class="span4">
+  <h5>Custom:</h5>
+  <%= f.radio_button :type, 'All Draft All Mid (ADAM)' %>  All Draft All Mid (ADAM) <br>
+  <%= f.radio_button :type, 'All Yordle All Mid (AYAM)' %> All Yordle All Mid (AYAM)<br>
+  <%= f.radio_button :type, 'All Random All Jungle (ARAJ)' %> All Random All Jungle (ARAJ)<br>
+  <%= f.radio_button :type, 'AAll Random All Bot (ARAB Dominion)' %> All Random All Bot (ARAB Dominion)<br>
+  <%= f.radio_button :type, 'All Random Get Shield (ARGS Dominion)' %> All Random Get Shield (ARGS Dominion)<br>
+  <%= f.radio_button :type, 'Draft Racing' %> Draft Racing<br>
+  <%= f.radio_button :type, 'Hardcore PVP' %> Hardcore PVP<br>
+  <%= f.radio_button :type, 'Protect the Soraka Bot (Protect the Queen)' %> Protect the Soraka Bot (Protect the Queen)<br>
+  <%= f.radio_button :type, 'Catch the Teemo' %> Catch the Teemo<br>
+  <%= f.radio_button :type, 'Catch the Yeti' %> Catch the Yeti<br>
+  <%= f.radio_button :type, 'LoL Football' %> LoL Football<br>
+  <%= f.radio_button :type, 'Find the Teemo' %> Find the Teemo<br>
+  <%= f.radio_button :type, 'Hide and Seek' %> Hide and Seek<br>
+  <%= f.radio_button :type, 'V-Zero' %> V-Zero<br>
+  <%= f.radio_button :type, 'Ultimate Bravery' %> Ultimate Bravery<br>
+  </div>
+  <div class="span4">
+  <h5>Normal:</h5>
+  <%= f.radio_button :type, 'Summoner’s Rift (Classic 5v5)' %> Summoner’s Rift (Classic 5v5)<br>
+  <%= f.radio_button :type, 'wisted Treeline (Classic 3v3)' %> wisted Treeline (Classic 3v3)<br>
+  <%= f.radio_button :type, 'Crystal Scar (Dominion 5v5)' %> Crystal Scar (Dominion 5v5)<br>
+  <%= f.radio_button :type, 'Howling Abyss (ARAM 5v5' %> Howling Abyss (ARAM 5v5)<br>
+
+  <h5>Co-op vs. AI:</h5>
+  <%= f.radio_button :type, 'Summoner’s Rift (Classic 5v5)' %> Summoner’s Rift (Classic 5v5)<br>
+  <%= f.radio_button :type, 'wisted Treeline (Classic 3v3)' %> wisted Treeline (Classic 3v3)<br>
+  <%= f.radio_button :type, 'Crystal Scar (Dominion 5v5)' %> Crystal Scar (Dominion 5v5)<br>
+
+  <h5>Ranked :</h5>
+  <%= f.radio_button :type, 'Summoner’s Rift (Classic 5v5)' %> Summoner’s Rift (Classic 5v5)<br>
+  </div>
+
+  <!--    <%= f.check_box :reason, {:class => 'reason'}, "Harassment: Offensive Language", "" %>  Harassment: Offensive Language<br>
+      <%= f.check_box :reason, {:class => 'reason'}, "Harassment: Verbal Abuse", "" %>  Harassment: Verbal Abuse<br>
+      <%= f.check_box :reason, {:class => 'reason'}, "Griefing: Intentionval Feeding", "" %>  Griefing: Intentional Feeding<br>
+      <%= f.check_box :reason, {:class => 'reason'}, "Griefing: Assisting Enemy Team", "" %>  Griefing: Assisting Enemy Team<br>
+      
+  -->
+
+<center>
+  <div class="span16">
+    <br>
+  <%= f.submit 'Report!' %>
+  </div>
+</center>
+  <% end %>
+  </div>

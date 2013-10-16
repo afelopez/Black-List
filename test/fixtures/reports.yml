@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  summoner: MyString
+  type: 
+  reason: MyString
+  detail: MyText
+
+two:
+  summoner: MyString
+  type: 
+  reason: MyString
+  detail: MyText
