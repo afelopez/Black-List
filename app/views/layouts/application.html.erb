@@ -46,6 +46,7 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
+        <div class="visible-phone"
         <div class="span2">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
@@ -53,6 +54,19 @@
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
+        </div>
+
+        <div class="visible-desktop"
+        <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+            <%= link_to 'New Report', new_report_path %>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        </div>
+
+
         <div class="span9">
           <%= bootstrap_flash %>
           <%= yield %>
