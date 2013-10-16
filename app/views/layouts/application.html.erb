@@ -39,27 +39,24 @@
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="#">Lol</a>
+          <div class="hidden-phone">
+          <a class="brand" href="/">Lol</a>
+          </div>
+          <div class="visible-phone">
+          <div class="brand"> <%= link_to 'New Report', new_report_path %> </div>
+          </div>
+
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="visible-phone"
-        <div class="span2">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-            <%= link_to 'New Report', new_report_path %>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        </div>
 
-        <div class="visible-desktop"
+        <div class="visible-desktop">
         <div class="span2">
           <div class="well sidebar-nav">
-            <ul class="nav nav-list">
+            <ul class="nav nav-list" style="pading:5px;">
             <%= link_to 'New Report', new_report_path %>
             </ul>
           </div><!--/.well -->
