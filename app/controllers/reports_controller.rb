@@ -9,7 +9,7 @@ class ReportsController < ApplicationController
     @frecuencias = @frecuencias.sort_by {|a,b| b}
     @frecuencias.reverse!
     @frecuencias.each { |summoner, frecuencia|   }
-    @users = Report.where(:summoner => Report.summoner)
+    @users = Report.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reports }
