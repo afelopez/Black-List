@@ -3,22 +3,29 @@ class ReportsController < ApplicationController
   # GET /reports.json
   def index
     @reports = Report.all
+
     @frecuencias = Hash.new(0)
     @reports.each {|u| @frecuencias[u.summoner] += 1 }
     @frecuencias = @frecuencias.sort_by {|a,b| b}
     @frecuencias.reverse!
     @frecuencias.each { |summoner, frecuencia|   }
-
+    @users = Report.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reports }
     end
   end
 
+  def user
+   
+  end
+
+
   # GET /reports/1
   # GET /reports/1.json
   def show
     @report = Report.find(params[:id])
+
 
     respond_to do |format|
       format.html # show.html.erb

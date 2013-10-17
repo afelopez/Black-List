@@ -10,11 +10,13 @@
     </thead>
 
     <tbody>
-      <% @frecuencias.each do |user, frecuencia,report| %>
+      <% @frecuencias.each do |summoner, frecuencia| %>
       <tr>
-      <td><%= user %></td>
+      <td><% @users.each do |report| %>
+        <%= link_to report do %><%= summoner %> <% end -%>
+      <% end -%>
+      </td>
       <td><%= frecuencia %> </td>
-      <td><%= link_to 'Show', report %></td>
     </tr>
     <% end %>
   </tbody>
