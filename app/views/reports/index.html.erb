@@ -12,10 +12,11 @@
     <tbody>
       <% @frecuencias.each do |summoner, frecuencia| %>
       <tr>
-      <td><% @users.each do |report| %>
+      <!-- <td><% @users.each do |report| %>
         <%= link_to report do %><%= report.summoner %> <% end -%>
       <% end -%>
-      </td>
+      -->
+      <td><%= summoner %></td>
       <td><%= frecuencia %> </td>
     </tr>
     <% end %>
