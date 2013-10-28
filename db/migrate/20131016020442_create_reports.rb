@@ -5,6 +5,7 @@ class CreateReports < ActiveRecord::Migration
       t.string :types
       t.string :reason
       t.text :detail
+      t.string :email
 
       t.timestamps
     end
