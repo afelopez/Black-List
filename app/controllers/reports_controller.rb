@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @email = Email.new
+    @correo = Correo.new
     @reports = Report.all
 
     @frecuencias = Hash.new(0)
@@ -13,6 +13,7 @@ class ReportsController < ApplicationController
     @users = Report.all
  
   end
+
 
   def user
    
@@ -52,7 +53,7 @@ class ReportsController < ApplicationController
   # POST /reports.json
   def create
     @report = Report.new(params[:report])
-    @email = Email.new(params[:email])
+
     respond_to do |format|
       if @report.save
         format.html { redirect_to @report, notice: 'Report was successfully created.' }
