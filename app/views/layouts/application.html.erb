@@ -13,16 +13,23 @@
     <%= csrf_meta_tags %>
 
   </head>
-  <body>
+  <body class="body">
 
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-inverse navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <div class="hidden-phone">
-          <a class="brand" href="/">Lol</a>
+          <a class="brand" style="text-decoration:none;" href="/"><h4>League of Legend Black List</h4></a>
           </div>
           <div class="visible-phone">
-          <div class="brand"> <%= link_to 'New Report', new_report_path %> </div>
+          <div class="brand " > 
+          <center>
+          <%= link_to  new_report_path do %>
+          <%= image_tag 'botom.png'%>
+          <% end -%>
+          
+          </center>
+          </div>
 
           </div>
 
@@ -35,11 +42,14 @@
 
         <div class="visible-desktop">
         <div class="span2">
-          <div class="well sidebar-nav">
+          <div class="well">
             <ul class="nav nav-list" style="pading:5px;">
 
 
-            <%= link_to 'New Report', new_report_path %>
+          <%= link_to  new_report_path do %>
+          <%= image_tag 'botom.png'%>
+          <% end -%>
+          
             </ul>
 
           </div><!--/.well -->
@@ -49,13 +59,18 @@
 
         <div class="span7">
           <%= bootstrap_flash %>
+          <br><br><br>
           <%= yield %>
         </div>
       </div><!--/row-->
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
+     
+             <div>
+        <%= link_to 'https://www.facebook.com/rolemgaming',  target: '_blank'  do %>
+          <p class="span2" style="color:#CCC;"> <i><b>R</b><i>olem</i> <i><b>M</b>edia</i> <i><b>G</b>roup</i> </p>
+        <% end -%>
+      </div>
+      
 
     </div> <!-- /container -->
 
