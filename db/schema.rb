@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20131029141600) do
     t.string   "types"
     t.string   "reason"
     t.text     "detail"
-    t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
