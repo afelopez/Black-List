@@ -55,7 +55,26 @@
           <%= bootstrap_flash %>
           <br>
           <%= yield %>
-          <script>
+
+          <%= render 'layouts/ga' %>
+        </div>
+      </div><!--/row-->
+
+     
+             <div>
+        <%= link_to 'https://www.facebook.com/rolemgaming',  target: '_blank'  do %>
+          <p class="span2" style="color:#CCC;"> <i><b>R</b><i>olem</i> <i><b>M</b>edia</i> <i><b>G</b>roup</i> </p>
+        <% end -%>
+      </div>
+      
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+<script>
 // Include the UserVoice JavaScript SDK (only needed once on a page)
 UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/G3ZtSfbSqkQpuQOlOoXQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
 
@@ -90,32 +109,13 @@ UserVoice.push(['identify', {
 }]);
 
 // Add default trigger to the bottom-right corner of the window:
-UserVoice.push(['addTrigger', { mode: 'smartvote', trigger_position: 'bottom-right' }]);
+UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
 
 // Or, use your own custom trigger:
-//UserVoice.push(['addTrigger', '#id', { mode: 'smartvote' }]);
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
 
 // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
 UserVoice.push(['autoprompt', {}]);
 </script>
-          <%= render 'layouts/ga' %>
-        </div>
-      </div><!--/row-->
-
-     
-             <div>
-        <%= link_to 'https://www.facebook.com/rolemgaming',  target: '_blank'  do %>
-          <p class="span2" style="color:#CCC;"> <i><b>R</b><i>olem</i> <i><b>M</b>edia</i> <i><b>G</b>roup</i> </p>
-        <% end -%>
-      </div>
-      
-
-    </div> <!-- /container -->
-
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "application" %>
-
   </body>
 </html>
