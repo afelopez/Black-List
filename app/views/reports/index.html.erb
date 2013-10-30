@@ -1,58 +1,53 @@
 <div class="span11">
-<div class=" offset0" style="min-width:290px;">
-<center> <p>Acá podras Reportar a los jugadores mas Toxicos! y todos los podran conocer!</p>
- <p>Adelante! y Reporta!</p></center>
- <br>  <br>
 
 
-</div>
+  <div class=" offset0" style="min-width:290px;">
+    <div class="well">
+      <ul class="nav nav-list" style="pading:5px;">
+        <center> 
+          <p>Acá podras Reportar a los jugadores mas Toxicos! y todos los podran conocer!</p>
+          <p>Adelante! y Reporta!</p>
+          <br>
+          <%= link_to  new_report_path do %>
+            <%= image_tag 'botom.png'%>
+          <% end %>
+        </center>          
+      </ul>
+    </div><!--/.well -->
+  </div>
+
+  <div style="min-width:290px; height:400px; overflow:scroll; ">
+    <table class="table" >
+      <thead>
+        <tr>
+          <th> <h4>Summoner Name</h4> </th>
+          <th> <h4># of Report</h4></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @frecuencias.each do |summoner, frecuencia| %>
+          <tr>
+            <td><%= summoner %></td>
+            <td><%= frecuencia %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <div class="well" style="height:auto; min-width:250px; padding-bottom:1px;">
+    <center>
+      <%= form_for(@correo) do |c| %>
+        <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
+        <br>
+        <%= c.submit 'Contáctanos!' %>
+      <% end %>
+    </center>
+  </div>
 
 
-
-
-
-
-
-          
-<div style="min-width:290px; height:400px; overflow: scroll; ">
-  <table class="table" >
-
-    <thead>
-      <tr>
-        <th> <h4>Summoner Name</h4> </th>
-        <th> <h4># of Report</h4></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @frecuencias.each do |summoner, frecuencia| %>
-      <tr>
-      <!-- <td><% @users.each do |report| %>
-        <%= link_to report do %><%= report.summoner %> <% end -%>
-      <% end -%>
-      -->
-      <td><%= summoner %></td>
-      <td><%= frecuencia %> </td>
-    </tr>
-    <% end %>
-  </tbody>
-
-
-</table>
-
-</div>
-<br>
-<div class="well" style="height:auto; min-width:250px; padding-bottom:1px;">
-
-<center>
-<%= form_for(@correo) do |c| %>
-
-  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
-    <br>
-  <%= c.submit 'Contáctanos!' %>
-  
-<% end %>
-</center>
-</div>
 </div>
  
