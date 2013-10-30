@@ -1,5 +1,4 @@
-
-
+<div class="span11">
 <div class=" offset0" style="min-width:250px;">
 <center> <p>Acá podras Reportar a los jugadores mas Toxicos! y todos los podran conocer!</p>
  <p>Adelante! y Reporta!</p></center>
@@ -8,8 +7,15 @@
 
 </div>
 
-<div style="min-width:250px; height:400px; overflow: scroll; width:100%; ">
-  <table class="table" style="min-width:250px;" >
+
+
+
+
+
+
+          
+<div style="min-width:290px; height:400px; overflow: scroll; ">
+  <table class="table" >
 
     <thead>
       <tr>
@@ -35,14 +41,18 @@
 </table>
 
 </div>
+<br>
+<div class="well" style="height:auto; min-width:250px; padding-bottom:1px;">
 
-  <div class="well"  style="min-width:200px; width:96%; height:130px;" >
-            <ul class="nav nav-list" style="pading:5px;">
+<center>
+<%= form_for(@correo) do |c| %>
 
-
-            <%= render 'correo' %>
-            </ul>
-
-          </div><!--/.well -->
+  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required"  %>
+    <br>
+  <%= c.submit 'Contáctanos!' %>
+  
+<% end %>
+</center>
+</div>
+</div>
  
-
