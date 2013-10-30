@@ -1,6 +1,7 @@
+<center>
 <h5>Contactanos! y aprende más sobre nosotros!</h5>
 
-<center><%= form_for(@correo) do |c| %>
-	<%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required"  %>
-	<%= c.submit 'Registrate!' %>
+<%= form_for(@correo) do |c| %>
+	<div class="span11"><%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required"  %></div>
+	<div class="span11"><%= c.submit 'Registrate!' %></div>
 <% end %></center>

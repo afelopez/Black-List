@@ -18,12 +18,12 @@
           </div>
           <div class="visible-phone visible-tablet">
           <div class="brand " > 
-          <center>
+          <div class="span">
           <%= link_to  new_report_path do %>
           <%= image_tag 'botom.png'%>
           <% end -%>
           
-          </center>
+          </div>
           </div>
 
           </div>
@@ -50,10 +50,11 @@
         </div>
 
 
-        <div class="span7">
+        <div class="span9">
           <%= bootstrap_flash %>
           <br>
           <%= yield %>
+
           <%= render 'layouts/ga' %>
         </div>
       </div><!--/row-->
