@@ -28,10 +28,16 @@
 
         </div><!--/span-->
 
+        <div class="visible-phone visible-tablet">
+          <%= bootstrap_flash %>
+          
+          <%= yield %>
+
+          <%= render 'layouts/ga' %>
+        </div>
 
 
-
-        <div class="span9">
+        <div class="span9 visible-desktop">
           <%= bootstrap_flash %>
           
           <%= yield %>
