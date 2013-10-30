@@ -1,5 +1,5 @@
 <div class="span11">
-<div class=" offset0" style="min-width:250px;">
+<div class=" offset0" style="min-width:290px;">
 <center> <p>Acá podras Reportar a los jugadores mas Toxicos! y todos los podran conocer!</p>
  <p>Adelante! y Reporta!</p></center>
  <br>  <br>
@@ -47,7 +47,7 @@
 <center>
 <%= form_for(@correo) do |c| %>
 
-  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required"  %>
+  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
     <br>
   <%= c.submit 'Contáctanos!' %>
   
