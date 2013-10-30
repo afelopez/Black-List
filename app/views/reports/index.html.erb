@@ -3,10 +3,12 @@
  <p>Adelante! y Reporta!</p></center>
  <br>  
 
-<h3>Lista de Reportes</h3>
+
 </div>
 
+<div style="min-width:250px; height:400px; overflow: scroll;">
   <table class="table" style="min-width:250px;" >
+
     <thead>
       <tr>
         <th> <h4>Summoner Name</h4> </th>
@@ -14,7 +16,6 @@
         <th></th>
       </tr>
     </thead>
-
     <tbody>
       <% @frecuencias.each do |summoner, frecuencia| %>
       <tr>
@@ -27,6 +28,7 @@
     </tr>
     <% end %>
   </tbody>
+</div>
 
 </table>
 
@@ -43,7 +45,5 @@
 
           </div><!--/.well -->
         </div><!--/span-->
-
-
 
 
