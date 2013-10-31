@@ -31,7 +31,7 @@
     <div class=" navbar-inverse container-fluid">
       <div class="row-fluid">
 
-      <div class="span2">
+      <div class="span2 visible-desktop">
         <div class="span2 well2 visible-desktop" style="position:fixed;">
 
           <div id="navbar">
@@ -43,16 +43,10 @@
           </div>            
         </div><!--/span-->
       </div>
-        <div class="visible-phone visible-tablet">
-          <%= bootstrap_flash %>
-          
-          <%= yield %>
-
-          <%= render 'layouts/ga' %>
-        </div>
 
 
-        <div class="span9 visible-desktop">
+
+        <div class="span9">
           <%= bootstrap_flash %>
           
           <%= yield %>
