@@ -7,27 +7,42 @@
   </head>
   <body class="body">
     <!--navbar -->
-    <div class="navbar navbar-inverse navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
+    <div class = "navbar-inverse well">
+                                    
+        <a href = "/" class = "navbar-brand" style="text-decoration:none;"><%= image_tag 'lol4.png'%></a>                        
+        <button class = "css3button hidden-desktop navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" style="float:right; margin-top:0px;">
+          <strong>Menú</strong>
 
-          <a class="brand" style="text-decoration:none;" href="/"><h4>League of Legend Black List</h4></a>
-
-
-
-        </div>
-      </div>
+        </button> 
+        <br><br>                          
+        <div class = "collapse navbar-collapse navHeaderCollapse">
+          <div id="navbar">
+            <ul class="nav">
+              <li><a href="#regiones"><strong>Regiones</strong></a></li>
+              <li><a href="#producto"></a></li>
+              <li><a href="#contacto"></a></li>
+            </ul>            
+          </div>            
+        </div>                        
     </div>
 
+
     <!-- cuerpo -->
-    <div class="container-fluid">
+    <div class=" navbar-inverse container-fluid">
       <div class="row-fluid">
 
+      <div class="span2">
+        <div class="span2 well2 visible-desktop" style="position:fixed;">
 
-        <div class="span2 visible-desktop">
-
+          <div id="navbar">
+            <ul class="nav">
+              <li><a href="#regiones"><strong>Regiones</strong></a></li>
+              <li><a href="#producto"></a></li>
+              <li><a href="#contacto"></a></li>
+            </ul>            
+          </div>            
         </div><!--/span-->
-
+      </div>
         <div class="visible-phone visible-tablet">
           <%= bootstrap_flash %>
           

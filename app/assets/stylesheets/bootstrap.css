@@ -1,3 +1,5 @@
+
+
 /*!
  * Bootstrap v2.3.2
  *
@@ -7,9 +9,51 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
+@import url(http://twitter.github.com/bootstrap/assets/css/bootstrap.css);
 
+button.css3button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: -moz-linear-gradient(
+    top,
+    #a3a3a3 0%,
+    #3b3b3b 50%,
+    #242424 50%,
+    #000000);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#a3a3a3),
+    color-stop(0.50, #3b3b3b),
+    color-stop(0.50, #242424),
+    to(#000000));
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.6);
+  -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.6);
+  box-shadow:
+    0px 1px 3px rgba(000,000,000,0.5),
+    inset 0px 0px 1px rgba(255,255,255,0.6);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,1),
+    0px 1px 0px rgba(255,255,255,0.2);
+}
 
+.box{
+    margin: 20px; padding: 15px;
+    background: #eee;
+    height: 500px;
+}
+#navbar{
 
+}
 .body{
 
   background: url('bgLanding.jpg') center center fixed;
@@ -296,7 +340,7 @@ a:focus {
 [class*="span"] {
   float: left;
   min-height: 1px;
-  margin-left: 20px;
+  margin-left: 20px;  
 }
 
 .container,
@@ -3148,6 +3192,19 @@ table th[class*="span"],
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF303030', endColorstr='#FF222222', GradientType=0);
     border-color: #252525;
 }
+.well2 {
+  min-height: 20px;
+
+
+    background-image: -moz-linear-gradient(top, #303030, #222222);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#303030), to(#222222));
+    background-image: -webkit-linear-gradient(top, #303030, #222222);
+    background-image: -o-linear-gradient(top, #303030, #222222);
+    background-image: linear-gradient(to bottom, #303030, #222222);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF303030', endColorstr='#FF222222', GradientType=0);
+    border-color: #252525;
+}
 
 .well blockquote {
   border-color: #ddd;
@@ -3982,6 +4039,8 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a {
   display: block;
   text-decoration: none;
+  margin:10px;
+
 }
 
 .nav > li > a:hover,
@@ -4818,7 +4877,7 @@ input[type="submit"].btn.btn-mini {
           border-radius: 6px 0 6px 6px;
 }
 
-.navbar-inverse .navbar-inner {
+.navbar-inner {
   background-color: #1b1b1b;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
@@ -4830,10 +4889,11 @@ input[type="submit"].btn.btn-mini {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
 }
 
+
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
   color: #999999;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 -4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .navbar-inverse .brand:hover,
@@ -4854,7 +4914,10 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
   color: #ffffff;
-  background-color: transparent;
+  background-color:  #111111;
+  margin: 0px;
+  padding: 10px;
+  padding-left: 40px
 }
 
 .navbar-inverse .nav .active > a,
@@ -4862,6 +4925,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
   background-color: #111111;
+
 }
 
 .navbar-inverse .navbar-link {
