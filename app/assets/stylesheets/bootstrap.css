@@ -4945,6 +4945,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
   background-color: #111111;
+  padding:10px;
 
 }
 
