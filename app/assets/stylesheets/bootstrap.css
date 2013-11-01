@@ -10,41 +10,39 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 @import url(http://twitter.github.com/bootstrap/assets/css/bootstrap.css);
-
-button.css3button {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  padding: 10px 20px;
-  background: -moz-linear-gradient(
-    top,
-    #a3a3a3 0%,
-    #3b3b3b 50%,
-    #242424 50%,
-    #000000);
-  background: -webkit-gradient(
-    linear, left top, left bottom, 
-    from(#a3a3a3),
-    color-stop(0.50, #3b3b3b),
-    color-stop(0.50, #242424),
-    to(#000000));
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: 1px solid #000000;
-  -moz-box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.6);
-  -webkit-box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.6);
-  box-shadow:
-    0px 1px 3px rgba(000,000,000,0.5),
-    inset 0px 0px 1px rgba(255,255,255,0.6);
-  text-shadow:
-    0px -1px 0px rgba(000,000,000,1),
-    0px 1px 0px rgba(255,255,255,0.2);
+.lista{
+  width: 40%;
 }
+button.myButton {
+        
+        -moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        -webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        
+        background-color:#a73f2d;
+        
+        border:1px solid #241d13;
+        
+        display:inline-block;
+        color:#ffffff;
+        font-family:arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+        
+        text-shadow:0px -1px 0px #7a2a1d;
+        
+    }
+    .myButton:hover {
+        
+        background-color:#b34332;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
 
 .box{
     margin: 20px; padding: 15px;
@@ -4917,7 +4915,6 @@ input[type="submit"].btn.btn-mini {
   background-color:  #111111;
   margin: 0px;
   padding: 10px;
-  padding-left: 40px
 }
 
 .navbar-inverse .nav .active > a,

@@ -3,11 +3,11 @@ class CountPerDayValidator < ActiveModel::EachValidator
     count = record.class.where(attribute => value).count
     record.errors[attribute] << "reportado muchas veces en esta hora" if count >= options[:max]
 	tiempo = 10
-	if count >= options[:max]
-		
-    
-    	
+	
+    if count >= options[:max]
+     #Scrip para el tiempo  	
     end
+  
   end
 end
 
