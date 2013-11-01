@@ -1,4 +1,7 @@
 Lol::Application.routes.draw do
+  
+
+
   get "regiones/regiones"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -6,7 +9,7 @@ Lol::Application.routes.draw do
 
   resources :reports
   resources :correos
-
+  resources :las
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

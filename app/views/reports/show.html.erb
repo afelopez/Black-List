@@ -1,3 +1,4 @@
+<div class="span9">
 <title><% title "Reporte"%></title>
 <p id="notice"><%= notice %></p>
 
@@ -21,15 +22,13 @@
   <%= @report.detail %>
 </p>
 
-
-<!--<%= link_to 'Edit', edit_report_path(@report) %> |-->
-
 <script>
 
 
   function redireccion() {
-  	alert('Serás redirigido al inicio.');
-    document.location.href='/';
+    alert('Serás redirigido al inicio.');
+    document.location.href='/reports';
   }
   setTimeout('redireccion()',3000 );
 </script>
+</div>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Summoner:</b>
+  <%= @la.summoner %>
+</p>
+
+<p>
+  <b>Types:</b>
+  <%= @la.types %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%= @la.reason %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @la.detail %>
+</p>
+
+
+
+<script>
+
+
+  function redireccion() {
+  	alert('Serás redirigido al inicio.');
+    document.location.href='/las';
+  }
+  setTimeout('redireccion()',3000 );
+</script>
+
