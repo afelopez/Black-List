@@ -21,7 +21,7 @@
       <!--Summoner-->
         <div>
           <h4>*Summoner’s Name:</h4>
-          <%= f.text_field :summoner , {:style => 'resize:vertical; width: 97%; height: 120px;'} %>
+          <%= f.text_field :summoner , {:style => 'width: 97%;'} %>
         </div>
         <br>
       <!--Reason-->
@@ -92,13 +92,16 @@
           <div>
             <br>
               <%= f.submit 'Report!' %>
+
+              <br>
+              <%= link_to 'Back', reports_path %>              
            </div>
         </center>
 
     <% end %>
   </div>
 </div>
-
+<!-- hidden-desktop -->
 <div class="well hidden-desktop">
   <div class="container-fluid ">
     <%= form_for(@report) do |f| %>
@@ -122,7 +125,7 @@
       <!--Summoner-->
         <div>
           <h4>*Summoner’s Name:</h4>
-          <%= f.text_field :summoner , {:style => 'resize:vertical; width: 97%; height: 120px;'} %>
+          <%= f.text_field :summoner , {:style => "width: 97%;"} %>
         </div>
         <br>
       <!--Reason-->
@@ -193,7 +196,10 @@
           <div>
             <br>
               <%= f.submit 'Report!' %>
+              <br>
+              <%= link_to 'Back', reports_path %>
            </div>
+           
         </center>
 
     <% end %>

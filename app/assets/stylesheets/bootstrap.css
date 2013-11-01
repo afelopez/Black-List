@@ -9,7 +9,30 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-@import url(http://twitter.github.com/bootstrap/assets/css/bootstrap.css);
+
+ img.region{
+  width: 150px;
+  height: 150px;
+  margin-top: 5px;
+}
+
+img.region2{
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+}
+
+img.comming{
+
+  filter: grayscale(100%);
+
+ -webkit-filter: grayscale(100%);
+ -moz-filter: grayscale(100%);
+ -o-filter: grayscale(100%);
+ -ms-filter: grayscale(100%);
+
+}
+
 .lista{
   width: 40%;
 }
