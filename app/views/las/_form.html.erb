@@ -16,18 +16,18 @@
       <% end %>
 
 
-      <h6>the elements that have (*) are required</h6>
+      <h6>Loes elementos que tienen (*) son requeridos</h6>
       <hr>
       <!--Summoner-->
         <div>
-          <h4>*Summoner’s Name:</h4>
+          <h4>* Nombre de invocador:</h4>
           <%= f.text_field :summoner , {:style => 'width: 97%;'} %>
         </div>
         <br>
       <!--Reason-->
         <div>
-          <h4>*Reason</h4>
-          <%= f.select  :reason, [['',''],
+          <h4>*Razón:</h4>
+          <%= f.select  :reason, [['Seleccione una razón',''],
                   ['Harassment: Offensive Language', 'Harassment: Offensive Language'],
                   ['Harassment: Verbal Abuse', 'Harassment: Verbal Abuse'],
                   ['Griefing: Intentional Feeding', 'Griefing: Intentional Feeding'],
@@ -36,7 +36,7 @@
         <br>
       <!--Type-->
         <div>
-          <h4>*Type of Game:</h4>
+          <h4>* Tipo de juego:</h4>
 
                 <ul class="nav" data-tabs="tabs">
                     <li><a data-toggle="tab" href="#ranked">Ranked</a></li>
@@ -84,17 +84,17 @@
         <br>
       <!--Detail-->
         <div>
-          <h4>Detail:</h4>
+          <h4>Detalles</h4>
           <%= f.text_area :detail, {:style => 'resize:vertical; width: 97%; height: 120px;'} %>
         </div>
       <!--Submit-->
         <center>
           <div>
             <br>
-              <%= f.submit 'Report!' %>
+              <%= f.submit 'Reporta!' %>
 
               <br>
-              <%= link_to 'Back', las_path %>              
+              <%= link_to 'Atras', las_path %>              
            </div>
         </center>
 
@@ -195,7 +195,7 @@
         <center>
           <div>
             <br>
-              <%= f.submit 'Report!' %>
+              <%= f.submit 'Reporta!' %>
               <br>
               <%= link_to 'Back', las_path %>
            </div>
