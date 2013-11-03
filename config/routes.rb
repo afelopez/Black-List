@@ -10,6 +10,7 @@ Lol::Application.routes.draw do
   resources :reports
   resources :correos
   resources :las
+  match '/howto', to: 'reports#howto'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

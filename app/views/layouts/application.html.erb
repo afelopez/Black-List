@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style type="text/css">#bljaIMGte{float:left;position:relative;margin: 10px;}#bljaIMGte .bljaIMGtex {position:absolute;top:5px;left:10px;}</style>
     <title><%= title %></title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>
   <body class="body">
     <!--navbar -->
-    <div class = "navbar-inverse well">
-                                    
-        <%= image_tag 'lol4.png'%>
-        <button class = "myButton hidden-desktop navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" style="float:right; margin-top:0px;">
+    <div class="navbar">
+      <div class="navbar-inner navbar-inverse">
+        <br>
+        <%= image_tag 'lol4.png', :class => 'span2'%>
+        <div class="blrand visible-desktop">
+          <ul class="nav " style="float:right;">
+                <li><a href="/">Regiones</a></li>
+                <li><a href="#howto">Cómo usar la página</a></li>
+                <li><a href="#contacto">Cómo mejorar</a></li>
+                <li><a href="#contacto">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <button class = "myButton hidden-desktop navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" style="float:right; margin:10px;">
           <%= image_tag 'list.png', :class => 'lista'%>
-
-        </button> 
-        
+        </button> <br>  
         <div class = "collapse navbar-collapse navHeaderCollapse hidden-desktop">
           <div id="navbar">
             <br>
-            <ul class="nav span3">
-              <li><a href="/"><strong>Regiones</strong></a></li>
-              <li><a href="#producto"></a></li>
-              <li><a href="#contacto"></a></li>
+            <ul class="nav">
+              <li class="nav span6"><a href="/">Regiones</a></li>
+              <li class="nav span6"><a href="#producto">Cómo usar la página</a></li>
+              <li class="nav span6"><a href="#contacto">Cómo mejorar</a></li>
+              <li class="nav span6"><a href="#contacto">Preguntas Frecuentes</a></li>
             </ul>            
           </div>            
-        </div>                        
+        </div>
+
+      </div>
     </div>
 
 
@@ -33,16 +44,7 @@
       <div class="row-fluid">
 
       <div class="span2 visible-desktop">
-        <div class="span2 well2 visible-desktop" style="position:fixed;">
 
-          <div id="navbar">
-            <ul class="nav">
-              <li><a href="/"><strong>Regiones</strong> </a></li>
-              <li><a href="#producto"></a></li>
-              <li><a href="#contacto"></a></li>
-            </ul>            
-          </div>            
-        </div><!--/span-->
       </div>
 
 

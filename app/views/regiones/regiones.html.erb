@@ -1,16 +1,62 @@
-<div class="well span9 visible-desktop">
+<div class="well span9 visible-desktop "style="height:auto; min-width:900px;">
   <div class="container-fluid ">
-  	<center>
-    <%= image_tag("brazil.png", :alt => "Brazil", :class => "region  comming" ) %>
-    <%= link_to image_tag("LAN.jpg", :alt => "Latinoameria norte", :class => "region"), reports_path %>
-    <%= link_to image_tag("LAS.png", :alt => "Latinoameria sur", :class => "region" ),las_path %>
-    <%= image_tag("EU.png", :alt => "Estados Unidos", :class => "region comming" ) %>
-    <%= image_tag("Europa1.png", :alt => "Europa oriental", :class => "region comming" ) %>
-    <%= image_tag("Europa2.png", :alt => "Europa occidental", :class => "region comming" ) %>
-    <%= image_tag("oceania.png", :alt => "Oceania", :class => "region comming" ) %>
-  	</center>
-		<br><br><br>
-  	<div style="height:auto; min-width:250px; padding-bottom:1px;">
+    <div class= "span9 offset1" style="height:auto; min-width:900px;">
+        
+      <div id="bljaIMGte">
+        <%= image_tag("EU.png", :alt => "Estados Unidos", :class => "region comming" ) %>   
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p> North America</p><br><br><br><br><br>
+          <p>(NA)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= link_to image_tag("LAN.jpg", :alt => "Latinoameria norte", :class => "region"), reports_path %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Latin America North</p><br><br><br><br><br>
+          <p>(LAN)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= link_to image_tag("LAS.png", :alt => "Latinoameria sur", :class => "region" ),las_path %>   
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Latin America South</p><br><br><br><br><br>
+          <p>(LAS)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("brazil.png", :alt => "Brazil", :class => "region  comming" ) %>  
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Brazil</p><br><br><br><br><br>
+          <p>(BR)</p>
+        </div>
+      </div>
+    </div>
+    <div class= "span9 offset2">
+      <div id="bljaIMGte">
+        <%= image_tag("Europa1.png", :class => "region comming" ) %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>EU West</p><br><br><br><br><br>
+          <p>(EUW)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("Europa2.png", :class => "region comming" ) %>
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>EU Nordic & East</p><br><br><br><br><br>
+          <p>(EUNE)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("oceania.png", :alt => "Oceania", :class => "region comming" ) %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Oceania</p><br><br><br><br><br>
+          <p>(AUS & NZ)</p>
+        </div>
+      </div>                                       
+  
+    </div>
+
+  	<div style="min-width:250px; margin-top:30px;" class="span7 offset2">
     	<center>
 	        <%= form_for(@correo) do |c| %>
 		        <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
@@ -23,28 +69,74 @@
 </div>
 
 <div class="well hidden-desktop">
-  <div class="container-fluid ">
-  	<center>
-    <%= image_tag("brazil.png", :alt => "Brazil", :class => "region2 comming" ) %>
-    <%= link_to image_tag("LAN.jpg", :alt => "Latinoameria norte", :class => "region2 "), reports_path %>
-    <%= link_to image_tag("LAS.png", :alt => "Latinoameria sur", :class => "region2 " ),las_path %>
-    <%= image_tag("LAS.png", :alt => "Latinoameria sur", :class => "region2 comming" ) %>
-    <%= image_tag("EU.png", :alt => "Estados Unidos", :class => "region2 comming" ) %>
-    <%= image_tag("Europa1.png", :alt => "Europa oriental", :class => "region2 comming" ) %>
-    <%= image_tag("Europa2.png", :alt => "Europa occidental", :class => "region2 comming" ) %>
-    <%= image_tag("oceania.png", :alt => "Oceania", :class => "region2 comming" ) %>
-  	</center>
-		<br><br><br>
-  	<div style="height:auto; min-width:250px; padding-bottom:1px;">
-    	<center>
-	        <%= form_for(@correo) do |c| %>
-		        <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
-		        <br>
-		        <%= c.submit 'Contáctanos!' %>
-	        <% end %>
+<center>
+   <div class="container-fluid ">
+    <div class= "offset2"  style="height:auto;">
+        
+      <div id="bljaIMGte">
+        <%= image_tag("EU.png", :alt => "Estados Unidos", :class => "region comming" ) %>   
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p> North America</p><br><br><br><br><br>
+          <p>(NA)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= link_to image_tag("LAN.jpg", :alt => "Latinoameria norte", :class => "region"), reports_path %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Latin America North</p><br><br><br><br><br>
+          <p>(LAN)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= link_to image_tag("LAS.png", :alt => "Latinoameria sur", :class => "region" ),las_path %>   
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Latin America South</p><br><br><br><br><br>
+          <p>(LAS)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("brazil.png", :alt => "Brazil", :class => "region  comming" ) %>  
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Brazil</p><br><br><br><br><br>
+          <p>(BR)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("Europa1.png", :class => "region comming" ) %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>EU West</p><br><br><br><br><br>
+          <p>(EUW)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("Europa2.png", :class => "region comming" ) %>
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>EU Nordic & East</p><br><br><br><br><br>
+          <p>(EUNE)</p>
+        </div>
+      </div>
+      <div id="bljaIMGte">
+        <%= image_tag("oceania.png", :alt => "Oceania", :class => "region comming" ) %> 
+        <div class="bljaIMGtex" style="color:#ffffff;">
+          <p>Oceania</p><br><br><br><br><br>
+          <p>(AUS & NZ)</p>
+        </div>
+      </div>                                       
+  
+    </div>
+
+    <div style="min-width:250px; margin-top:30px;">
+      <center>
+          <%= form_for(@correo) do |c| %>
+            <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required", :class => "span5"  %>
+            <br>
+            <%= c.submit 'Contáctanos!' %>
+          <% end %>
         </center>
     </div>
   </div>
+
+</center>
 </div>
 
 
