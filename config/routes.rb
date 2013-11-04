@@ -10,7 +10,11 @@ Lol::Application.routes.draw do
   resources :reports
   resources :correos
   resources :las
-  match '/howto', to: 'reports#howto'
+  match '/howto', to: 'regiones#howto'
+  match '/howtoimprove', to: 'regiones#howtoimprove'
+  match '/FAQ', to: 'regiones#FAQ'
+  match '/lan', to: 'reports#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
