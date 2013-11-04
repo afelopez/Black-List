@@ -10,6 +10,7 @@ Lol::Application.routes.draw do
   resources :reports
   resources :correos
   resources :las
+  match '/success', to: 'regiones#success'
   match '/howto', to: 'regiones#howto'
   match '/howtoimprove', to: 'regiones#howtoimprove'
   match '/FAQ', to: 'regiones#FAQ'

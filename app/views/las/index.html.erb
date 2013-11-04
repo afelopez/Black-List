@@ -1,11 +1,20 @@
 <title><% title "LAS"%></title>
-<!-- Desktop-->
+<!-- Desktop-->             
+            <div class="well offset9 span3" style="position: fixed;">  
+              <center>
+                <p>¿Quieres recibir las últimas noticias de League of Legends Blacklist? </p>
+                Regístrate en nuestra lista de correos:
+                <%= form_for(@correo) do |c| %>
+                  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required" ,:style => 'margin-top:40px;'%>
+                  <br>
+                  <%= c.submit 'Registrar' %>
+                <% end %>
+              </center>
+            </div>
           <center> 
-            <p>Acá podras Reportar a los jugadores mas Toxicos! y todos los podran conocer!
-              <br>Adelante! y Reporta!</p>
-            <%= link_to  new_la_path do %>
-              <%= image_tag 'botom.png'%>
-            <% end %>
+            <p>Aquí podrás reportar a los jugadores más tóxicos de League of Legends para que todos los conozcan. 
+            <br>Tan solo debes hacer click en reportar!</p>
+            <a href="/las/new" style="text-decoration:none; color:red;"><h1>REPORTA!</h1></a>
           </center> <br><br><br>
 
     <div style="height:400px; overflow:scroll; ">
@@ -26,10 +35,3 @@
         </tbody>
       </table>
     </div>
-    <center>
-      <%= form_for(@correo) do |c| %>
-        <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required" ,:style => 'margin-top:40px;'%>
-        <br>
-        <%= c.submit 'Contáctanos!' %>
-      <% end %>
-    </center>

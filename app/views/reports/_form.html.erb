@@ -15,7 +15,7 @@
       <% end %>
 
 
-      <h6>Loes elementos que tienen (*) son requeridos</h6>
+      <h6>Los elementos que tienen (*) son requeridos</h6>
       <hr>
       <!--Summoner-->
         <div>
@@ -44,9 +44,9 @@
                     <li><a data-toggle="tab" href="#coo-vs-ai">Co-op vs. AI</a></li>
                 </ul>
                
-                <center>
+  
                 <div class="tab-content">
-                  <div class="tab-pane" id="ranked">
+                  <div class="tab-pane" id="ranked" >
                         <%= f.radio_button :types, 'Summoner’s Rift (Classic 5v5 Ranked)' %> Summoner’s Rift (Classic 5v5)<br>
                   </div>
                   <div class="tab-pane" id="custom">
@@ -78,7 +78,6 @@
                         <%= f.radio_button :types, 'Crystal Scar (Dominion 5v5 coo-vs-ai)' %> Crystal Scar (Dominion 5v5)<br>
                   </div>
                 </div>  
-                </center> 
         </div>
         <br>
       <!--Detail-->
@@ -90,7 +89,7 @@
         <center>
           <div>
             <br>
-              <%= f.submit 'Reporta!' %>
+              <%= f.submit 'Reportar!' %>
 
               <br>
               <%= link_to 'Atras', reports_path %>              

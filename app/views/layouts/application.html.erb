@@ -4,6 +4,18 @@
     <title><%= title %></title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= csrf_meta_tags %>
+     <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+      </script>
+
   </head>
 
 
@@ -13,8 +25,9 @@
     <div class="navbar">
       <div class="navbar-inner navbar-inverse">
         <br>
-
-        <%= image_tag 'lol4.png', :class => 'span2'%>
+        <a href="<%= root_url %>" class="brand">
+          <%= image_tag('lol4.png', :class => 'span2') %>
+        </a>
 
         <div class="blrand visible-desktop">
           <ul class="nav " style="float:right;">
@@ -47,25 +60,32 @@
     </div>
 
 
+
     <!-- cuerpo -->
     <div class=" navbar-inverse" >
-      <div class="container well  ">
+      <div class="container " style="margin-left:15%; ">
         <%= bootstrap_flash %>
-        <div class="span9" style="margin-left:13%;">
+        <div class="span9 well">
           <%= yield %>
         </div>
+
         <%= render 'layouts/ga' %>
       </div>
     </div>
 
 
+
+
       
 
     <!-- Footer -->
-    <div>
+    <div style="width:100%;">
         <%= link_to 'https://www.facebook.com/rolemgaming',  target: '_blank'  do %>
           <p class="span2" style="color:#CCC;"> <i><b>R</b><i>olem</i> <i><b>M</b>edia</i> <i><b>G</b>roup</i> </p>
         <% end -%>
+      </div>
+         <div class="offset6">
+         <a class="FlattrButton" style="display:none; float:right;" rev="flattr;button:compact;" href="http://www.leagueoflegendsblacklist.com/"></a>
     </div>
 
     <%= javascript_include_tag "application" %>

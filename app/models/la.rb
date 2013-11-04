@@ -3,7 +3,7 @@ class CountPerDayValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
 
     time = Time.now
-    t = Report.new()
+    t = La.new()
     count = record.class.where(attribute => value).count
       if count >= options[:max]
         if  time.min - t.lol.min < 1
@@ -18,8 +18,8 @@ class La < ActiveRecord::Base
   attr_accessible :detail, :reason, :summoner, :types , :email , :last 
   validates_presence_of  :reason, :types
   validates_length_of :summoner, :minimum => 4, :maximum => 20, :allow_blank => true
-  validates :summoner, :count_per_day => {:max => 4}    
+  validates :summoner, :count_per_day => {:max => 1}    
   def lol
-    timestamp_field = DateTime.now
-  end
+    last = Time.now
+  end 
 end

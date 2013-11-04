@@ -5,7 +5,7 @@ class CorreosController < ApplicationController
 
     respond_to do |format|
       if @correo.save
-        format.html { redirect_to @correo, notice: 'correo was successfully created.' }
+        format.html { redirect_to @correo }
     	end	
     end
   end
