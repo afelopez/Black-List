@@ -20,8 +20,8 @@ class Report < ActiveRecord::Base
   validates_presence_of  :reason, :types
   validates_length_of :summoner, :minimum => 4, :maximum => 20, :allow_blank => true
   validates :summoner, :count_per_day => {:max => 1}    
-  def timestamp
-    timestamp_field = DateTime.now
+  def lol
+    last = Time.now
   end
 end
 
