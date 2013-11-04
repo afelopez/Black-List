@@ -18,8 +18,8 @@ class La < ActiveRecord::Base
   attr_accessible :detail, :reason, :summoner, :types , :email , :last 
   validates_presence_of  :reason, :types
   validates_length_of :summoner, :minimum => 4, :maximum => 20, :allow_blank => true
-  validates :summoner, :count_per_day => {:max => 1}    
-  def timestamp
+  validates :summoner, :count_per_day => {:max => 4}    
+  def lol
     timestamp_field = DateTime.now
   end
 end
