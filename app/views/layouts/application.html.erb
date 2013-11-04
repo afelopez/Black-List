@@ -13,8 +13,8 @@
         s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
         t.parentNode.insertBefore(s, t);
     })();
-/* ]]> */
-      </script>
+/* ]]> */</script>
+  
 
   </head>
 
@@ -83,10 +83,19 @@
         <%= link_to 'https://www.facebook.com/rolemgaming',  target: '_blank'  do %>
           <p class="span2" style="color:#CCC;"> <i><b>R</b><i>olem</i> <i><b>M</b>edia</i> <i><b>G</b>roup</i> </p>
         <% end -%>
-      </div>
-         <div class="offset6">
-         <a class="FlattrButton" style="display:none; float:right;" rev="flattr;button:compact;" href="http://www.leagueoflegendsblacklist.com/"></a>
-    </div>
+     </div>
+     
+         <div class="offset4" style="float:left;">
+         <a class="FlattrButton" style="display:none;" href="http://www.leagueoflegendsblacklist.com/"></a>
+         </div>
+        
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="CY7FFCMCP84KJ">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+
 
     <%= javascript_include_tag "application" %>
     <!-- User Voice -->
