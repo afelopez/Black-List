@@ -10,7 +10,7 @@ class CountPerDayValidator < ActiveModel::EachValidator
           time = Time.now
           summ = Report.where(["created_at >= ? AND created_at <= ?", ultimo, time]).count  
           if summ >= 4
-            record.errors[attribute] << "cant be report more times"
+            record.errors[attribute] << "cant be report more times "
           end
         end
   end
