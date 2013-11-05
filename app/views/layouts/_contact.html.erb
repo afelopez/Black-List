@@ -1,0 +1,11 @@
+            <div class="well offset9  span3" style="position: fixed; margin-top:-19px;">  
+              <center>
+                <p>¿Quieres recibir las últimas noticias de League of Legends Blacklist? </p>
+                Regístrate en nuestra lista de correos:
+                <%= form_for(@correo) do |c| %>
+                  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required" ,:style => 'margin-top:40px;'%>
+                  <br>
+                  <%= c.submit 'Registrar' %>
+                <% end %>
+              </center>
+            </div>

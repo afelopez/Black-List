@@ -1,9 +1,6 @@
 class CountPerDayValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value) 
-
-    
-    
       count = record.class.where(attribute => value).count
       omg = record.class.where(attribute => value)
         if count >= options[:max]
@@ -20,6 +17,13 @@ end
 
 
 class La < ActiveRecord::Base
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['summoner LIKE ?', "%#{search}%"])
+    end
+  end
+
   attr_accessible :detail, :reason, :summoner, :types , :email , :last 
   validates_presence_of  :reason, :types
   validates_length_of :summoner, :minimum => 4, :maximum => 20, :allow_blank => true

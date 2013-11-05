@@ -22,13 +22,5 @@
   <%= @report.detail %>
 </p>
 
-<script>
-
-
-  function redireccion() {
-    alert('Serás redirigido al inicio.');
-    document.location.href='/reports';
-  }
-  setTimeout('redireccion()',500 );
-</script>
-
+<br><br>
+    <center><%= link_to 'Atras', reports_path %>  </center>

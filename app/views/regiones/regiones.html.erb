@@ -1,16 +1,6 @@
 <title><% title "Regiones"%></title>
 <center>
-            <div class="well offset9  span3" style="position: fixed;">  
-              <center>
-                <p>¿Quieres recibir las últimas noticias de League of Legends Blacklist? </p>
-                Regístrate en nuestra lista de correos:
-                <%= form_for(@correo) do |c| %>
-                  <%= c.email_field :correo, placeholder: 'Correo eletrónico', required: "required" ,:style => 'margin-top:40px;'%>
-                  <br>
-                  <%= c.submit 'Registrar' %>
-                <% end %>
-              </center>
-            </div>
+
   <div style="margin:0 auto; width:600px;">
         <div id="bljaIMGte" style ="float:left;">
           <p> North America</p>
@@ -58,6 +48,6 @@
   </div>
 </center>
 
-
+<%= render 'layouts/contact' %>
 
 

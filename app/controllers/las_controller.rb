@@ -1,5 +1,6 @@
 class LasController < InheritedResources::Base
 	def index
+    @lol = La.search(params[:search])
     @correo = Correo.new
     @reports = La.all
 

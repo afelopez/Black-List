@@ -2,6 +2,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
+    @lol = Report.search(params[:search])
     @correo = Correo.new
     @reports = Report.all
 
@@ -10,14 +11,11 @@ class ReportsController < ApplicationController
     @frecuencias = @frecuencias.sort_by {|a,b| b}
     @frecuencias.reverse!
     @frecuencias.each { |summoner, frecuencia|   }
-    @users = Report.all
- 
+
   end
 
 
-  def user
-   
-  end
+
 
 
   # GET /reports/1
