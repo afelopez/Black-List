@@ -2,16 +2,17 @@ class CountPerDayValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value) 
 
-    ultimo = Time.now - Time.now.min - 50
-    time = Time.now
-    lol = Report.find_by_summoner 'mierdita'
-    summ = Report.where(["created_at >= ? AND created_at <= ?", ultimo, time]).count  
-    if summ >= 4
+    
+    
       count = record.class.where(attribute => value).count
         if count >= options[:max]
+          ultimo = Time.now - 60
+          time = Time.now
+          summ = Report.where(["created_at >= ? AND created_at <= ?", ultimo, time]).count  
+          if summ >= 4
             record.errors[attribute] << "cant be report more times"
+          end
         end
-    end
   end
 end
 
